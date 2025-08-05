@@ -1,26 +1,31 @@
-name: Generate Snake
+name: Generate snake animation
 
 on:
-  schedule:
-    - cron: "0 0 * * *" # Gera todo dia à meia-noite UTC
+  schedule: # execute every 12 hours
+    - cron: "* */12 * * *"
+
   workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Platane/snk@v3
-        with:
-          github_user_name: gordeusbraga
-          outputs: |
-            dist/snake.svg
-            dist/snake-dark.svg?palette=github-dark
-          grid_size: 20 # tamanho da grade (menor = mais blocos)
-          years: 2023,2024,2025 # inclui anos passados também
-          color_snake: "#4caf50" # cor da cobrinha
-          color_dots: "#ebedf0,#c6e48b,#7bc96f,#239a3b,#196127" # gradiente de intensidade
+  push:
+    branches:
+    - main
 
-      - name: Deploy Snake
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: generate snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: dist/snake.svg?palette=github-dark
+
+
+      - name: push snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
