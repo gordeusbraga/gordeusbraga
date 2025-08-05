@@ -1,0 +1,43 @@
+name: Generate Readme Stats (SVG)
+
+on:
+  schedule:
+    - cron: "0 1 * * *" # roda todo dia 01:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install deps
+        run: npm ci
+        working-directory: .
+
+      - name: Run generator
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_1 }}
+          GITHUB_USER: gordeusbraga
+        run: node scripts/generate-stats.js
+        working-directory: .
+
+      - name: Deploy to branch 'output'
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
