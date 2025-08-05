@@ -1,4 +1,3 @@
-
 name: Generate Snake
 
 on:
@@ -15,6 +14,11 @@ jobs:
           github_user_name: gordeusbraga
           outputs: |
             dist/snake.svg
+            dist/snake-dark.svg?palette=github-dark
+          grid_size: 20 # tamanho da grade (menor = mais blocos)
+          years: 2023,2024,2025 # inclui anos passados também
+          color_snake: "#4caf50" # cor da cobrinha
+          color_dots: "#ebedf0,#c6e48b,#7bc96f,#239a3b,#196127" # gradiente de intensidade
 
       - name: Deploy Snake
         uses: crazy-max/ghaction-github-pages@v3.1.0
