@@ -9,11 +9,11 @@
 
 ---
 
-### 📊 GitHub Stats
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=gordeusbraga&include_all_commits=true&count_private=true&show_icons=true&theme=dracula&hide_border=true" height="150" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=gordeusbraga&layout=compact&langs_count=6&theme=dracula&hide_border=true" height="150" />
-</div>
+### 📊 Minhas Estatísticas
+
+![Top Langs](https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/top-langs.svg)
+![Stats](https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/stats.svg)
+
 
 ---
 
