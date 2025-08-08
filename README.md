@@ -1,60 +1,42 @@
 <h2 align="center">Hi 👋! My name is Matheus Braga (Gordeus) and I'm a Full Stack Developer</h2>
 
-###
+---
 
+### 🚀 Skills
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=html" height="30" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=css" height="30" alt="css logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=react" height="30" alt="react logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=tailwind" height="30" alt="tailwindcss logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30" alt="typescript logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/nodedotjs/339933" height="30" alt="nodejs logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/supabase/3ECF8E" height="30" alt="supabase logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/mysql/4479A1" height="30" alt="mysql logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=express" height="30" alt="express logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/android/3DDC84" height="30" alt="android logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/apple/000000" height="30" alt="apple logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/insomnia/5E00D3" height="30" alt="insomnia logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=figma" height="30" alt="figma logo"  />
+  <img src="https://skillicons.dev/icons?i=html,css,react,tailwind,js,ts,nodejs,supabase,mysql,express,android,apple,insomnia,figma" height="40" />
 </div>
 
-###
+---
 
+### 📊 GitHub Stats
 <div align="center">
-  <img src="https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/stats.svg" height="150" />
-  <img src="https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/top-langs.svg" height="150" />
-  <img src="https://streak-stats.demolab.com?user=gordeusbraga&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5&order=3" height="150" alt="streak graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=gordeusbraga&include_all_commits=true&count_private=true&show_icons=true&theme=dracula&hide_border=true" height="150" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=gordeusbraga&layout=compact&langs_count=6&theme=dracula&hide_border=true" height="150" />
 </div>
 
-###
+---
 
-<div align="left">
-  <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=matheusbcp.dev@gmail.com&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
-  <a href="https://www.linkedin.com/in/matheus-braga-carraro-pedrosa-05b72b2a9/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
-  </a>
+### 🔥 Streak Stats
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=gordeusbraga&theme=dracula&hide_border=true" height="150" />
 </div>
 
-###
+---
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/pacman-contribution-graph-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/pacman-contribution-graph.svg">
-  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/pacman-contribution-graph.svg" height="200" >
-</picture>
+### 📬 Contact
+<div align="center">
+  <a href="mailto:matheusbcp.dev@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/matheus-braga-carraro-pedrosa-05b72b2a9/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+</div>
 
-###
+---
+
+### 🕹 Pacman Contributions
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/pacman-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/pacman-contribution-graph.svg">
+    <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/pacman-contribution-graph.svg">
+  </picture>
+</div>
