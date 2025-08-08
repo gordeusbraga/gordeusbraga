@@ -45,26 +45,32 @@ function svgFooter() {
 
 function renderTopLangsSvg(topLangs) {
   const width = 600;
-  const height = 160;
+  const height = 180;
   const padding = 20;
   const barHeight = 18;
-  const maxBarWidth = width - padding * 2 - 120;
+  const maxBarWidth = width - padding * 2 - 140;
 
+  const totalBytes = topLangs.reduce((sum, lang) => sum + lang.bytes, 0) || 1;
   const maxBytes = topLangs.length ? topLangs[0].bytes : 1;
-  let y = padding;
+  const colors = ["#39d353", "#58a6ff", "#ff7b72", "#f2cc60", "#d2a8ff", "#ffb86c"];
 
+  let y = padding;
   let body = `<rect width="100%" height="100%" fill="#0b0f14" rx="8" />`;
   body += `<g font-family="Segoe UI, Arial" font-size="12" fill="#c9d1d9">`;
   body += `<text x="${padding}" y="${y+12}" font-weight="700" font-size="14">Top Languages</text>`;
   y += 28;
 
-  for (const lang of topLangs) {
+  topLangs.forEach((lang, i) => {
     const barW = Math.round((lang.bytes / maxBytes) * maxBarWidth);
-    body += `<text x="${padding}" y="${y+12}">${lang.name}</text>`;
-    body += `<rect x="${padding+120}" y="${y-6}" width="${barW}" height="${barHeight}" rx="3" fill="#39d353"/>`;
-    body += `<text x="${padding+120+barW+8}" y="${y+12}" fill="#c9d1d9">${(lang.bytes).toLocaleString()}</text>`;
+    const percentage = ((lang.bytes / totalBytes) * 100).toFixed(1) + "%";
+    const color = colors[i % colors.length];
+
+    body += `<text x="${padding}" y="${y+12}">${lang.name} (${percentage})</text>`;
+    body += `<rect x="${padding+140}" y="${y-6}" width="${barW}" height="${barHeight}" rx="3" fill="${color}"/>`;
+    body += `<text x="${padding+140+barW+8}" y="${y+12}" fill="#c9d1d9">${(lang.bytes).toLocaleString()}</text>`;
     y += barHeight + 12;
-  }
+  });
+
   body += `</g>`;
   return svgHeader(width, height) + body + svgFooter();
 }
