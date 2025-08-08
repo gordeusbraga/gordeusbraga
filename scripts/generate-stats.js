@@ -14,6 +14,31 @@ const headers = {
   Accept: "application/vnd.github.v3+json",
 };
 
+// 🎨 Cores oficiais das linguagens (GitHub linguist)
+const languageColors = {
+  JavaScript: "#f1e05a",
+  TypeScript: "#3178c6",
+  HTML: "#e34c26",
+  CSS: "#563d7c",
+  Python: "#3572A5",
+  Java: "#b07219",
+  C: "#555555",
+  "C++": "#f34b7d",
+  PHP: "#4F5D95",
+  Ruby: "#701516",
+  Go: "#00ADD8",
+  Rust: "#dea584",
+  Shell: "#89e051",
+  Swift: "#ffac45",
+  Kotlin: "#A97BFF",
+  Dart: "#00B4AB",
+  Vue: "#41b883",
+  SCSS: "#c6538c",
+  Dockerfile: "#384d54",
+  JSON: "#292929",
+  Markdown: "#083fa1"
+};
+
 async function fetchAllRepos() {
   const repos = [];
   let page = 1;
@@ -25,7 +50,7 @@ async function fetchAllRepos() {
     if (data.length < 100) break;
     page++;
   }
-  return repos.filter(r => r.owner && (r.owner.login === username || r.owner.login === process.env.GITHUB_ACTOR));
+  return repos.filter(r => r.owner && r.owner.login === username);
 }
 
 async function fetchLanguages(url) {
@@ -48,29 +73,27 @@ function renderTopLangsSvg(topLangs) {
   const height = 180;
   const padding = 20;
   const barHeight = 18;
-  const maxBarWidth = width - padding * 2 - 140;
+  const maxBarWidth = width - padding * 2 - 120;
 
-  const totalBytes = topLangs.reduce((sum, lang) => sum + lang.bytes, 0) || 1;
   const maxBytes = topLangs.length ? topLangs[0].bytes : 1;
-  const colors = ["#39d353", "#58a6ff", "#ff7b72", "#f2cc60", "#d2a8ff", "#ffb86c"];
-
   let y = padding;
+
   let body = `<rect width="100%" height="100%" fill="#0b0f14" rx="8" />`;
   body += `<g font-family="Segoe UI, Arial" font-size="12" fill="#c9d1d9">`;
-  body += `<text x="${padding}" y="${y+12}" font-weight="700" font-size="14">Top Languages</text>`;
+  body += `<text x="${padding}" y="${y+12}" font-weight="700" font-size="14">Top Languages (com %)</text>`;
   y += 28;
 
-  topLangs.forEach((lang, i) => {
+  const totalBytes = topLangs.reduce((sum, lang) => sum + lang.bytes, 0);
+
+  for (const lang of topLangs) {
+    const percent = ((lang.bytes / totalBytes) * 100).toFixed(1) + "%";
     const barW = Math.round((lang.bytes / maxBytes) * maxBarWidth);
-    const percentage = ((lang.bytes / totalBytes) * 100).toFixed(1) + "%";
-    const color = colors[i % colors.length];
-
-    body += `<text x="${padding}" y="${y+12}">${lang.name} (${percentage})</text>`;
-    body += `<rect x="${padding+140}" y="${y-6}" width="${barW}" height="${barHeight}" rx="3" fill="${color}"/>`;
-    body += `<text x="${padding+140+barW+8}" y="${y+12}" fill="#c9d1d9">${(lang.bytes).toLocaleString()}</text>`;
+    const color = languageColors[lang.name] || "#39d353"; // cor padrão se não achar
+    body += `<text x="${padding}" y="${y+12}">${lang.name}</text>`;
+    body += `<rect x="${padding+120}" y="${y-6}" width="${barW}" height="${barHeight}" rx="3" fill="${color}"/>`;
+    body += `<text x="${padding+120+barW+8}" y="${y+12}" fill="#c9d1d9">${percent}</text>`;
     y += barHeight + 12;
-  });
-
+  }
   body += `</g>`;
   return svgHeader(width, height) + body + svgFooter();
 }
