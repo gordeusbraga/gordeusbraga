@@ -10,10 +10,10 @@
 ---
 
 ### 📊 Minhas Estatísticas
-
-![Top Langs](https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/top-langs.svg)
-![Stats](https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/stats.svg)
-
+<div align="center">
+  <img src="https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/stats.svg" height="150" />
+  <img src="https://raw.githubusercontent.com/gordeusbraga/gordeusbraga/output/top-langs.svg" height="150" />
+</div>
 
 ---
 
@@ -26,8 +26,12 @@
 
 ### 📬 Contact
 <div align="center">
-  <a href="mailto:matheusbcp.dev@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/matheus-braga-carraro-pedrosa-05b72b2a9/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:matheusbcp.dev@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/matheus-braga-carraro-pedrosa-05b72b2a9/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
 </div>
 
 ---
