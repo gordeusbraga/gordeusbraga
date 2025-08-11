@@ -1,4 +1,5 @@
 import fs from "fs/promises";
+import fetch from "node-fetch";
 
 const token = process.env.GITHUB_TOKEN;
 const username = process.env.GITHUB_USER || process.env.GITHUB_ACTOR;
@@ -88,7 +89,7 @@ function renderTopLangsSvg(topLangs) {
   for (const lang of topLangs) {
     const percent = ((lang.bytes / totalBytes) * 100).toFixed(1) + "%";
     const barW = Math.round((lang.bytes / maxBytes) * maxBarWidth);
-    const color = languageColors[lang.name] || "#39d353"; // cor padrão se não achar
+    const color = languageColors[lang.name] || "#39d353";
     body += `<text x="${padding}" y="${y+12}">${lang.name}</text>`;
     body += `<rect x="${padding+120}" y="${y-6}" width="${barW}" height="${barHeight}" rx="3" fill="${color}"/>`;
     body += `<text x="${padding+120+barW+8}" y="${y+12}" fill="#c9d1d9">${percent}</text>`;
