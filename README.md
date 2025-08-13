@@ -49,7 +49,7 @@
 ###
 
 <div align="center">
-  <a href="mailto:matheusbcp.dev@gmail.com" target="_blank">
+  <a href="mailto:matheusbcp.dev@gmail.com">
     <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="38" alt="gmail logo"  />
   </a>
   <a href="https://www.linkedin.com/in/matheus-braga-carraro-pedrosa-05b72b2a9/" target="_blank">
