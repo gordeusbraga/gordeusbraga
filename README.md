@@ -9,7 +9,7 @@
 ###
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=supabase,express,androidstudio,apple,azure,figma,git" height="40" alt="Tools and Cloud skills" />&nbsp;&nbsp;&nbsp;
+  <img src="https://skillicons.dev/icons?i=supabase,express,androidstudio,apple-dark,azure,figma,git" height="40" alt="Tools and Cloud skills" />&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/insomnia/5E00D3" height="40" alt="insomnia logo" />
 </div>
 
